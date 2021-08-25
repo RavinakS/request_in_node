@@ -1,0 +1,14 @@
+{
+  "name": "using_axios",
+  "version": "1.0.0",
+  "description": "request(project from saral) in node.js using axios.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ravina",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
