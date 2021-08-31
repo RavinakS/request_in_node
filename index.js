@@ -5,7 +5,7 @@ const { resolve } = require('path');
 const readline = require('readline-sync')
 
 const url = 'http://saral.navgurukul.org/api/courses';
-const fileName = 'courses.json';
+const courses_file = 'courses.json';
 let ifCache = true;
 
 function storeData(filename, data){
@@ -47,8 +47,9 @@ async function caching(filename, url){
     let exericeses = "";
     // return new Promise((resolve, reject)=>{
         try{
-            let json_data = fs.readFileSync(fileName);
+            let json_data = fs.readFileSync(filename);
             exericeses = JSON.parse(json_data);
+            console.log(exericeses);
             console.log(`reading ${filename} file.`);
             return exericeses;
         }catch{
@@ -63,7 +64,7 @@ async function caching(filename, url){
 async function start(){
     const all_data = await axios.get(url);
 
-    const wrote = await storeData(fileName, all_data);
+    const wrote = await storeData(courses_file, all_data);
 
     printCourses(all_data);
     console.log("");

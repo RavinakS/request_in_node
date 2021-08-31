@@ -1,0 +1,125 @@
+{
+  "data": [
+    {
+      "id": "3717",
+      "parent_exercise_id": null,
+      "name": "Background",
+      "slug": "instructions-to-python-facilitators__background",
+      "sequence_num": 0,
+      "review_type": "manual",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/instructions-to-python-facilitators/background.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "3716",
+      "parent_exercise_id": null,
+      "name": "About Meraki",
+      "slug": "instructions-to-python-facilitators__about-meraki",
+      "sequence_num": 100,
+      "review_type": "manual",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/instructions-to-python-facilitators/about-meraki.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "3722",
+      "parent_exercise_id": null,
+      "name": "Getting Started",
+      "slug": "instructions-to-python-facilitators__getting-started",
+      "sequence_num": 200,
+      "review_type": "manual",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/instructions-to-python-facilitators/getting-started.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "3721",
+      "parent_exercise_id": null,
+      "name": "How to Create a Class?",
+      "slug": "instructions-to-python-facilitators__create-class",
+      "sequence_num": 300,
+      "review_type": "manual",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/instructions-to-python-facilitators/create-class.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "3774",
+      "parent_exercise_id": null,
+      "name": "Code of Conduct for Volunteers",
+      "slug": "instructions-to-python-facilitators__code-of-conduct-V",
+      "sequence_num": 400,
+      "review_type": "manual",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/instructions-to-python-facilitators/code-of-conduct-V.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "3718",
+      "parent_exercise_id": null,
+      "name": "Python Class Structure",
+      "slug": "instructions-to-python-facilitators__python-class-structure",
+      "sequence_num": 500,
+      "review_type": "manual",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/instructions-to-python-facilitators/python-class-structure.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "3719",
+      "parent_exercise_id": null,
+      "name": "Python Curriculum Structure",
+      "slug": "instructions-to-python-facilitators__python-curriculum-structure",
+      "sequence_num": 600,
+      "review_type": "manual",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/instructions-to-python-facilitators/python-curriculum-structure.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "3723",
+      "parent_exercise_id": null,
+      "name": "How to take a class?",
+      "slug": "instructions-to-python-facilitators__how-to-take-a-class",
+      "sequence_num": 700,
+      "review_type": "manual",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/instructions-to-python-facilitators/how-to-take-a-class.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "3720",
+      "parent_exercise_id": null,
+      "name": "Spoken English Curriculum Structure",
+      "slug": "instructions-to-python-facilitators__spoken-english-curriculum-structure",
+      "sequence_num": 800,
+      "review_type": "manual",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/instructions-to-python-facilitators/spoken-english-curriculum-structure.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "3775",
+      "parent_exercise_id": "3775",
+      "name": "Spoken English Phases",
+      "slug": "instructions-to-python-facilitators__Spoken-English-Phases/SpokenEnglish-Phases",
+      "sequence_num": 900,
+      "review_type": "manual",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/instructions-to-python-facilitators/Spoken-English-Phases/SpokenEnglish-Phases.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "3769",
+      "parent_exercise_id": null,
+      "name": "Volunteer Tracking Sheet",
+      "slug": "instructions-to-python-facilitators__Volunteer-tracker",
+      "sequence_num": 1000,
+      "review_type": "manual",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/instructions-to-python-facilitators/Volunteer-tracker.md",
+      "submission_type": null,
+      "childExercises": []
+    }
+  ]
+}
