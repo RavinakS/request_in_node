@@ -85,8 +85,14 @@ function printExercises(exercise_data){
 async function getContent(slugs, course_url, slug_id){
     const url = course_url.slice(0, -1); // removing last character from the urls "courses<>course"
     const content_url = url + '/getBySlug?slug=' + slugs[slug_id-1];
-    const content = await  
-    console.log(contant_url); 
+    const exercise_content = await axios.get(content_url);
+    const content =JSON.parse(exercise_content.data.content); 
+    
+    console.log("    ***");
+    var index = 0;
+    for(index; index<content.length; index++){
+        console.log(content[index]["value"]);
+    }
 }
 
 async function start(){
@@ -118,12 +124,13 @@ async function start(){
                 console.log("Wrong input.");
                 console.log("");
             }else{
-                console.log("");
-                getContant(slug_list, get_exercises.url, exercise_id);;
+                content = await getContent(slug_list, get_exercises.url, exercise_id);
+                // console.log(content);
                 console.log("");
             }
         }else{
-            getContant(slug_list, get_exercises.url, exercise_id);
+            content = await getContent(slug_list, get_exercises.url, exercise_id);
+            // console.log(content);
             console.log("");
         }
     }else{
