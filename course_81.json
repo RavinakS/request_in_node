@@ -1,0 +1,140 @@
+{
+  "data": [
+    {
+      "id": "2002",
+      "parent_exercise_id": "2002",
+      "name": "submission_type: url",
+      "slug": "english-401__verbs/Introduction_of_verbs",
+      "sequence_num": 1000,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/english-401/verbs/Introduction_of_verbs.md",
+      "submission_type": "url",
+      "childExercises": [
+        {
+          "id": "2005",
+          "parent_exercise_id": "2002",
+          "name": "Auxiliary_Verbs",
+          "slug": "english-401__verbs/Auxiliary_Verbs",
+          "sequence_num": 1001,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/english-401/verbs/Auxiliary_Verbs.md",
+          "submission_type": null
+        }
+      ]
+    },
+    {
+      "id": "2003",
+      "parent_exercise_id": "2003",
+      "name": "Tenses",
+      "slug": "english-401__tenses/Tenses",
+      "sequence_num": 2000,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/english-401/tenses/Tenses.md",
+      "submission_type": null,
+      "childExercises": [
+        {
+          "id": "2006",
+          "parent_exercise_id": "2003",
+          "name": "Simple_Present_Tense",
+          "slug": "english-401__tenses/Simple_Present_Tense",
+          "sequence_num": 2001,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/english-401/tenses/Simple_Present_Tense.md",
+          "submission_type": null
+        },
+        {
+          "id": "2007",
+          "parent_exercise_id": "2003",
+          "name": "Present_Continuous_Tense",
+          "slug": "english-401__tenses/Present_Continuous_Tense",
+          "sequence_num": 2002,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/english-401/tenses/Present_Continuous_Tense.md",
+          "submission_type": null
+        },
+        {
+          "id": "2008",
+          "parent_exercise_id": "2003",
+          "name": "Present_Perfect_Tense",
+          "slug": "english-401__tenses/Present_Perfect_Tense",
+          "sequence_num": 2003,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/english-401/tenses/Present_Perfect_Tense.md",
+          "submission_type": null
+        },
+        {
+          "id": "2009",
+          "parent_exercise_id": "2003",
+          "name": "Simple_Past_Tense",
+          "slug": "english-401__tenses/Simple_Past_Tense",
+          "sequence_num": 2004,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/english-401/tenses/Simple_Past_Tense.md",
+          "submission_type": null
+        },
+        {
+          "id": "2010",
+          "parent_exercise_id": "2003",
+          "name": "Past_Continuous_Tense",
+          "slug": "english-401__tenses/Past_Continuous_Tense",
+          "sequence_num": 2005,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/english-401/tenses/Past_Continuous_Tense.md",
+          "submission_type": null
+        },
+        {
+          "id": "2011",
+          "parent_exercise_id": "2003",
+          "name": "Past_Perfect_Tense",
+          "slug": "english-401__tenses/Past_Perfect_Tense",
+          "sequence_num": 2006,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/english-401/tenses/Past_Perfect_Tense.md",
+          "submission_type": null
+        },
+        {
+          "id": "2012",
+          "parent_exercise_id": "2003",
+          "name": "Simple_Future_Tense",
+          "slug": "english-401__tenses/Simple_Future_Tense",
+          "sequence_num": 2007,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/english-401/tenses/Simple_Future_Tense.md",
+          "submission_type": null
+        },
+        {
+          "id": "2013",
+          "parent_exercise_id": "2003",
+          "name": "Future_Perfect_Tense",
+          "slug": "english-401__tenses/Future_Perfect_Tense",
+          "sequence_num": 2008,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/english-401/tenses/Future_Perfect_Tense.md",
+          "submission_type": null
+        }
+      ]
+    },
+    {
+      "id": "2021",
+      "parent_exercise_id": null,
+      "name": "submission_type: url",
+      "slug": "english-401__Review_Exercise_2",
+      "sequence_num": 3000,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/english-401/Review_Exercise_2.md",
+      "submission_type": "url",
+      "childExercises": []
+    },
+    {
+      "id": "2004",
+      "parent_exercise_id": null,
+      "name": "submission_type: url",
+      "slug": "english-401__Review_Exercise",
+      "sequence_num": 4000,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/english-401/Review_Exercise.md",
+      "submission_type": "url",
+      "childExercises": []
+    }
+  ]
+}

@@ -51,8 +51,8 @@ async function caching(filename, url){
         return exericeses;
     }catch{
         exericeses = await axios.get(url);
-        const wrote = await storeData(filename, exericeses);
-        return exericeses;
+        await storeData(filename, exericeses);
+        return exericeses.data;
     }
 }
 
@@ -66,9 +66,12 @@ function printExercises(exercise_data){
             childExercises_list = exercise_list[index].childExercises;
             var count = 0;
             for(count; count<childExercises_list.length; count++){
-                console.log(`${count+1}. ${childExercises_list[count].name}`);
+                console.log(`    ${count+1}. ${childExercises_list[count].name}`);
             }
         }
+    }
+    if(index===0){
+        return "no"
     }
     return exercise_list;
 }
@@ -89,11 +92,31 @@ async function start(){
     const exercise_details = await caching(get_exercises.filename, get_exercises.url);
 
     const exercise_list = printExercises(exercise_details);
-    console.log("");
-    const exercise = parseInt(readline.question("Which exercise will you go with:- "));
-    console.log("");
-    console.log(exercise_list[exercise-1].name);
-    console.log("");
+    if(exercise_list !== "no"){
+        console.log("");
+        let exercise = parseInt(readline.question("Which exercise will you go with(only parant exercises):- "));
+        console.log("");
+        if(exercise >= exercise_list.length){
+            console.log("Please select only parant exercises not child ones.");
+            console.log("do check once which is chiled and which is parant exercise.");
+            console.log("");
+            exercise = parseInt(readline.question("Which exercise will you go with(only parant exercises):- "));
+            if(exercise >= exercise_list.length){
+                console.log("");
+                console.log("Wrong input.");
+                console.log("");
+            }else{
+                console.log("");
+                console.log(exercise_list[exercise-1].slug);
+                console.log("");
+            }
+        }else{
+            console.log(exercise_list[exercise-1].slug);
+            console.log("");
+        }
+    }else{
+        console.log("Exercise not available.");
+    }
     
 
 }

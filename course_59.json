@@ -1,0 +1,187 @@
+{
+  "data": [
+    {
+      "id": "1232",
+      "parent_exercise_id": null,
+      "name": "How to Use",
+      "slug": "samvaad-beginner__1-howtouse",
+      "sequence_num": 0,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/1-howtouse.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1233",
+      "parent_exercise_id": "1233",
+      "name": "Topics",
+      "slug": "samvaad-beginner__Cards/inspiration",
+      "sequence_num": 2000,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/inspiration.md",
+      "submission_type": null,
+      "childExercises": [
+        {
+          "id": "1234",
+          "parent_exercise_id": "1233",
+          "name": "navgurukul-problems",
+          "slug": "samvaad-beginner__Cards/navgurukul-problems",
+          "sequence_num": 2001,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/navgurukul-problems.md",
+          "submission_type": null
+        },
+        {
+          "id": "1235",
+          "parent_exercise_id": "1233",
+          "name": "Hobbies",
+          "slug": "samvaad-beginner__Cards/hobbies",
+          "sequence_num": 2002,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/hobbies.md",
+          "submission_type": null
+        },
+        {
+          "id": "1237",
+          "parent_exercise_id": "1233",
+          "name": "Family",
+          "slug": "samvaad-beginner__Cards/family",
+          "sequence_num": 2003,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/family.md",
+          "submission_type": null
+        },
+        {
+          "id": "1236",
+          "parent_exercise_id": "1233",
+          "name": "Dream Job",
+          "slug": "samvaad-beginner__Cards/dream-job",
+          "sequence_num": 2004,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/dream-job.md",
+          "submission_type": null
+        },
+        {
+          "id": "1238",
+          "parent_exercise_id": "1233",
+          "name": "Friends",
+          "slug": "samvaad-beginner__Cards/friends",
+          "sequence_num": 2005,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/friends.md",
+          "submission_type": null
+        },
+        {
+          "id": "1239",
+          "parent_exercise_id": "1233",
+          "name": "Seasons",
+          "slug": "samvaad-beginner__Cards/seasons",
+          "sequence_num": 2006,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/seasons.md",
+          "submission_type": null
+        },
+        {
+          "id": "1240",
+          "parent_exercise_id": "1233",
+          "name": "name:Festival",
+          "slug": "samvaad-beginner__Cards/festival",
+          "sequence_num": 2007,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/festival.md",
+          "submission_type": null
+        },
+        {
+          "id": "1241",
+          "parent_exercise_id": "1233",
+          "name": "Problems",
+          "slug": "samvaad-beginner__Cards/problems",
+          "sequence_num": 2008,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/problems.md",
+          "submission_type": null
+        },
+        {
+          "id": "1248",
+          "parent_exercise_id": "1233",
+          "name": "NavGurukul - Journey",
+          "slug": "samvaad-beginner__Cards/navgurukul-journey",
+          "sequence_num": 2009,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/navgurukul-journey.md",
+          "submission_type": null
+        },
+        {
+          "id": "1249",
+          "parent_exercise_id": "1233",
+          "name": "Dream Holiday",
+          "slug": "samvaad-beginner__Cards/dream-holiday",
+          "sequence_num": 2010,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/dream-holiday.md",
+          "submission_type": null
+        },
+        {
+          "id": "1242",
+          "parent_exercise_id": "1233",
+          "name": "Sports",
+          "slug": "samvaad-beginner__Cards/sports",
+          "sequence_num": 2011,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/sports.md",
+          "submission_type": null
+        },
+        {
+          "id": "1243",
+          "parent_exercise_id": "1233",
+          "name": "Movies",
+          "slug": "samvaad-beginner__Cards/movies",
+          "sequence_num": 2012,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/movies.md",
+          "submission_type": null
+        },
+        {
+          "id": "1244",
+          "parent_exercise_id": "1233",
+          "name": "Childhood Memory",
+          "slug": "samvaad-beginner__Cards/childhood-memory",
+          "sequence_num": 2013,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/childhood-memory.md",
+          "submission_type": null
+        },
+        {
+          "id": "1245",
+          "parent_exercise_id": "1233",
+          "name": "Hometown",
+          "slug": "samvaad-beginner__Cards/hometown",
+          "sequence_num": 2014,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/hometown.md",
+          "submission_type": null
+        },
+        {
+          "id": "1246",
+          "parent_exercise_id": "1233",
+          "name": "Politics",
+          "slug": "samvaad-beginner__Cards/politics",
+          "sequence_num": 2015,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/politics.md",
+          "submission_type": null
+        },
+        {
+          "id": "1247",
+          "parent_exercise_id": "1233",
+          "name": "Exams",
+          "slug": "samvaad-beginner__Cards/exams",
+          "sequence_num": 2016,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/samvaad-beginner/Cards/exams.md",
+          "submission_type": null
+        }
+      ]
+    }
+  ]
+}

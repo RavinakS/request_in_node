@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": "1793",
+      "parent_exercise_id": null,
+      "name": "how-to-use",
+      "slug": "technical-readings-101__how-to-use",
+      "sequence_num": 0,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/technical-readings-101/how-to-use.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1794",
+      "parent_exercise_id": null,
+      "name": "artificial-intelligence",
+      "slug": "technical-readings-101__artificial-intelligence",
+      "sequence_num": 100,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/technical-readings-101/artificial-intelligence.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1795",
+      "parent_exercise_id": null,
+      "name": "machine-learning",
+      "slug": "technical-readings-101__machine-learning",
+      "sequence_num": 200,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/technical-readings-101/machine-learning.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1798",
+      "parent_exercise_id": null,
+      "name": "cryptography",
+      "slug": "technical-readings-101__cryptography",
+      "sequence_num": 300,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/technical-readings-101/cryptography.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1796",
+      "parent_exercise_id": null,
+      "name": "blockchain",
+      "slug": "technical-readings-101__blockchain",
+      "sequence_num": 400,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/technical-readings-101/blockchain.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1797",
+      "parent_exercise_id": null,
+      "name": "internet-of-things",
+      "slug": "technical-readings-101__internet-of-things",
+      "sequence_num": 500,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/technical-readings-101/internet-of-things.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1814",
+      "parent_exercise_id": null,
+      "name": "virtual-reality",
+      "slug": "technical-readings-101__virtual-reality",
+      "sequence_num": 600,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/technical-readings-101/virtual-reality.md",
+      "submission_type": null,
+      "childExercises": []
+    }
+  ]
+}
