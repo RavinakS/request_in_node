@@ -45,21 +45,34 @@ function access_to_exercises(mainData, userInput){
 
 async function caching(filename, url){
     let exericeses = "";
-    // return new Promise((resolve, reject)=>{
-        try{
-            let json_data = fs.readFileSync(filename);
-            exericeses = JSON.parse(json_data);
-            console.log(exericeses);
-            console.log(`reading ${filename} file.`);
-            return exericeses;
-        }catch{
-            exericeses = await axios.get(url);
-            const wrote = await storeData(filename, exericeses);
-            console.log(`writing on ${filename} file.`);
-            return exericeses;
-        }
-    // })
+    try{
+        let json_data = fs.readFileSync(filename);
+        exericeses = JSON.parse(json_data);
+        return exericeses;
+    }catch{
+        exericeses = await axios.get(url);
+        const wrote = await storeData(filename, exericeses);
+        return exericeses;
+    }
 }
+
+function printExercises(exercise_data){
+    const exercise_list = exercise_data.data;
+    let childExercises_list = []
+    var index = 0;
+    for(index; index<exercise_list.length; index++){
+        console.log(`${index+1}. ${exercise_list[index]["name"]}`);
+        if(exercise_list[index].childExercises !== null){
+            childExercises_list = exercise_list[index].childExercises;
+            var count = 0;
+            for(count; count<childExercises_list.length; count++){
+                console.log(`${count+1}. ${childExercises_list[count].name}`);
+            }
+        }
+    }
+    return exercise_list;
+}
+
 
 async function start(){
     const all_data = await axios.get(url);
@@ -69,12 +82,20 @@ async function start(){
     printCourses(all_data);
     console.log("");
 
-    const user = parseInt(readline.question("Which course do you wanna go with:- "));
-    const get_exercises = access_to_exercises(all_data, user);
+    const course = parseInt(readline.question("Which course do you wanna go with:- "));
+    const get_exercises = access_to_exercises(all_data, course);
     console.log("");
 
     const exercise_details = await caching(get_exercises.filename, get_exercises.url);
+
+    const exercise_list = printExercises(exercise_details);
     console.log("");
+    const exercise = parseInt(readline.question("Which exercise will you go with:- "));
+    console.log("");
+    console.log(exercise_list[exercise-1].name);
+    console.log("");
+    
+
 }
 
 start();
