@@ -9,6 +9,7 @@
   "author": "Ravina",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "readline-sync": "^1.4.10"
   }
 }
