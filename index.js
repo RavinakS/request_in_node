@@ -95,6 +95,36 @@ async function getContent(slugs, course_url, slug_id){
     }
 }
 
+async function choosingExercise(slugList, exercise_link){
+    if(slugList !== "no"){
+        console.log("");
+        let exercise_id = parseInt(readline.question("Which exercise will you go with(only parant exercises):- "));
+        console.log("");
+        if(exercise_id > slugList.length){
+            console.log("Please select only parant exercises not child ones.");
+            console.log("do check once which is chiled and which is parant exercise.");
+            console.log("");
+            exercise_id = parseInt(readline.question("Which exercise will you go with(only parant exercises):- "));
+            if(exercise_id > slugList.length){
+                console.log("");
+                console.log("Wrong input.");
+                console.log("");
+            }else{
+                content = await getContent(slugList, exercise_link, exercise_id);
+                // console.log(content);
+                console.log("");
+            }
+        }else{
+            content = await getContent(slugList, exercise_link, exercise_id);
+            // console.log(content);
+            console.log("");
+        }
+    }else{
+        console.log("Exercise not available.");
+    }
+
+}
+
 async function start(){
     const all_data = await axios.get(url);
 
@@ -110,33 +140,9 @@ async function start(){
     const exercise_details = await caching(get_exercises.filename, get_exercises.url);
 
     const slug_list = printExercises(exercise_details);
-    if(slug_list !== "no"){
-        console.log("");
-        let exercise_id = parseInt(readline.question("Which exercise will you go with(only parant exercises):- "));
-        console.log("");
-        if(exercise_id > slug_list.length){
-            console.log("Please select only parant exercises not child ones.");
-            console.log("do check once which is chiled and which is parant exercise.");
-            console.log("");
-            exercise_id = parseInt(readline.question("Which exercise will you go with(only parant exercises):- "));
-            if(exercise_id > slug_list.length){
-                console.log("");
-                console.log("Wrong input.");
-                console.log("");
-            }else{
-                content = await getContent(slug_list, get_exercises.url, exercise_id);
-                // console.log(content);
-                console.log("");
-            }
-        }else{
-            content = await getContent(slug_list, get_exercises.url, exercise_id);
-            // console.log(content);
-            console.log("");
-        }
-    }else{
-        console.log("Exercise not available.");
-    }
 
+    choosingExercise(slug_list, get_exercises.url);
+    
 }
 
 start();
