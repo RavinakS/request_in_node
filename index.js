@@ -6,6 +6,7 @@ const readline = require('readline-sync')
 
 const url = 'http://saral.navgurukul.org/api/courses';
 const fileName = 'courses.json';
+let ifCache = false;
 
 function storeData(filename, data){
     return new Promise((resolve, reject)=>{
@@ -35,6 +36,19 @@ function courseID(data, userInput){
     return coursesDetails[userInput-1]["id"];
 }
 
+function exerciseDetails(courseID){
+    const exercise_url =  'http://saral.navgurukul.org/api/courses/' + courseID + '/exercises';
+    return exercise_url;
+}
+
+function caching(filename, data){
+    return new Promise((resolve, reject)=>{
+        try{
+            
+        }
+    })
+}
+
 async function start(){
     const data = await axios.get(url);
 
@@ -44,7 +58,9 @@ async function start(){
     console.log("");
 
     const user = parseInt(readline.question("Which course you wanna go with:- "));
-    console.log(courseID(data, user));
+    const course_id = courseID(data, user);
+
+    console.log(exerciseDetails(course_id));
 
     
 }
