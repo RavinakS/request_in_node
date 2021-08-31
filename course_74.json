@@ -1,0 +1,136 @@
+{
+  "data": [
+    {
+      "id": "1781",
+      "parent_exercise_id": null,
+      "name": "introduction",
+      "slug": "meradb__introduction",
+      "sequence_num": 0,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/meradb/introduction.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1852",
+      "parent_exercise_id": null,
+      "name": "pickledb",
+      "slug": "meradb__pickledb",
+      "sequence_num": 100,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/meradb/pickledb.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1853",
+      "parent_exercise_id": null,
+      "name": "loading-and-dumping",
+      "slug": "meradb__loading-and-dumping",
+      "sequence_num": 200,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/meradb/loading-and-dumping.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1854",
+      "parent_exercise_id": null,
+      "name": "get-and-set",
+      "slug": "meradb__get-and-set",
+      "sequence_num": 300,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/meradb/get-and-set.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1857",
+      "parent_exercise_id": null,
+      "name": "more-functions",
+      "slug": "meradb__more-functions",
+      "sequence_num": 400,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/meradb/more-functions.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1872",
+      "parent_exercise_id": null,
+      "name": "ram-vs-hard-disk",
+      "slug": "meradb__ram-vs-hard-disk",
+      "sequence_num": 500,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/meradb/ram-vs-hard-disk.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1855",
+      "parent_exercise_id": null,
+      "name": "auto-dump",
+      "slug": "meradb__auto-dump",
+      "sequence_num": 600,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/meradb/auto-dump.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1858",
+      "parent_exercise_id": null,
+      "name": "managing-multiple-db",
+      "slug": "meradb__managing-multiple-db",
+      "sequence_num": 700,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/meradb/managing-multiple-db.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1859",
+      "parent_exercise_id": null,
+      "name": "dmerge",
+      "slug": "meradb__dmerge",
+      "sequence_num": 800,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/meradb/dmerge.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1875",
+      "parent_exercise_id": null,
+      "name": "congrats",
+      "slug": "meradb__congrats",
+      "sequence_num": 900,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/meradb/congrats.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1873",
+      "parent_exercise_id": null,
+      "name": "need-for-cache",
+      "slug": "meradb__need-for-cache",
+      "sequence_num": 1000,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/meradb/need-for-cache.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1874",
+      "parent_exercise_id": null,
+      "name": "using-db-as-cache",
+      "slug": "meradb__using-db-as-cache",
+      "sequence_num": 1100,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/meradb/using-db-as-cache.md",
+      "submission_type": null,
+      "childExercises": []
+    }
+  ]
+}

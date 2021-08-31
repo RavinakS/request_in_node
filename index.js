@@ -6,7 +6,7 @@ const readline = require('readline-sync')
 
 const url = 'http://saral.navgurukul.org/api/courses';
 const fileName = 'courses.json';
-let ifCache = false;
+let ifCache = true;
 
 function storeData(filename, data){
     return new Promise((resolve, reject)=>{
@@ -16,7 +16,7 @@ function storeData(filename, data){
             if(err){
                 reject("something went wrong!");
             }else{
-                resolve(string_data)
+                resolve("Successfully written!")
             }
         })
     })
@@ -31,38 +31,49 @@ function printCourses(data){
     }
 }
 
-function courseID(data, userInput){
-    const coursesDetails = data.data.availableCourses;  
-    return coursesDetails[userInput-1]["id"];
+function access_to_exercises(mainData, userInput){
+    const coursesDetails = mainData.data.availableCourses;  
+    const exercise_url =  'http://saral.navgurukul.org/api/courses/' + coursesDetails[userInput-1]["id"] + '/exercises';
+    const filename = 'course_' + coursesDetails[userInput-1]["id"] + '.json';
+    const course_details = {
+        'filename': filename,
+        'url': exercise_url
+    }
+    return course_details;
 }
 
-function exerciseDetails(courseID){
-    const exercise_url =  'http://saral.navgurukul.org/api/courses/' + courseID + '/exercises';
-    return exercise_url;
-}
 
-function caching(filename, data){
-    return new Promise((resolve, reject)=>{
+async function caching(filename, url){
+    let exericeses = "";
+    // return new Promise((resolve, reject)=>{
         try{
-            
+            let json_data = fs.readFileSync(fileName);
+            exericeses = JSON.parse(json_data);
+            console.log(`reading ${filename} file.`);
+            return exericeses;
+        }catch{
+            exericeses = await axios.get(url);
+            const wrote = await storeData(filename, exericeses);
+            console.log(`writing on ${filename} file.`);
+            return exericeses;
         }
-    })
+    // })
 }
 
 async function start(){
-    const data = await axios.get(url);
+    const all_data = await axios.get(url);
 
-    const wrote = await storeData(fileName, data);
+    const wrote = await storeData(fileName, all_data);
 
-    printCourses(data);
+    printCourses(all_data);
     console.log("");
 
-    const user = parseInt(readline.question("Which course you wanna go with:- "));
-    const course_id = courseID(data, user);
+    const user = parseInt(readline.question("Which course do you wanna go with:- "));
+    const get_exercises = access_to_exercises(all_data, user);
+    console.log("");
 
-    console.log(exerciseDetails(course_id));
-
-    
+    const exercise_details = await caching(get_exercises.filename, get_exercises.url);
+    console.log("");
 }
 
 start();
