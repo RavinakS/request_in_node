@@ -82,8 +82,10 @@ function printExercises(exercise_data){
     return slug_list;
 }
 
-function getContant(slugs, course_url){
-    const contant_url = course_url.pop();
+async function getContent(slugs, course_url, slug_id){
+    const url = course_url.slice(0, -1); // removing last character from the urls "courses<>course"
+    const content_url = url + '/getBySlug?slug=' + slugs[slug_id-1];
+    const content = await  
     console.log(contant_url); 
 }
 
@@ -104,31 +106,29 @@ async function start(){
     const slug_list = printExercises(exercise_details);
     if(slug_list !== "no"){
         console.log("");
-        let exercise = parseInt(readline.question("Which exercise will you go with(only parant exercises):- "));
+        let exercise_id = parseInt(readline.question("Which exercise will you go with(only parant exercises):- "));
         console.log("");
-        if(exercise > slug_list.length){
+        if(exercise_id > slug_list.length){
             console.log("Please select only parant exercises not child ones.");
             console.log("do check once which is chiled and which is parant exercise.");
             console.log("");
-            exercise = parseInt(readline.question("Which exercise will you go with(only parant exercises):- "));
-            if(exercise > slug_list.length){
+            exercise_id = parseInt(readline.question("Which exercise will you go with(only parant exercises):- "));
+            if(exercise_id > slug_list.length){
                 console.log("");
                 console.log("Wrong input.");
                 console.log("");
             }else{
                 console.log("");
-                console.log(slug_list[exercise-1]);
+                getContant(slug_list, get_exercises.url, exercise_id);;
                 console.log("");
             }
         }else{
-            console.log(slug_list[exercise-1]);
+            getContant(slug_list, get_exercises.url, exercise_id);
             console.log("");
         }
     }else{
         console.log("Exercise not available.");
     }
-    
-    getContant(slug_list, get_exercises.url);
 
 }
 
