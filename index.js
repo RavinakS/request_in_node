@@ -31,10 +31,9 @@ function printCourses(data){
     }
 }
 
-function access_to_exercises(mainData, userInput){
-    const coursesDetails = mainData.data.availableCourses;  
-    const exercise_url =  'http://saral.navgurukul.org/api/courses/' + coursesDetails[userInput-1]["id"] + '/exercises';
-    const filename = 'course_' + coursesDetails[userInput-1]["id"] + '.json';
+function access_to_exercises(mainData, userInput){ 
+    const exercise_url =  'http://saral.navgurukul.org/api/courses/' + mainData[userInput-1]["id"] + '/exercises';
+    const filename = 'course_' + mainData[userInput-1]["id"] + '.json';
     const course_details = {
         'filename': filename,
         'url': exercise_url
@@ -107,15 +106,15 @@ async function choosingExercise(slugList, exercise_link, exerciseID){
 
 function checkingUserinput(input, array){
     return new Promise((resolve, reject)=>{
-        try{
-            let id = parseInt(input);
-            if(id>array.length){
-                reject("no")
-            }else{
-                resolve('yes')
-            }
-        }catch{
-            reject('No')
+        let e_id = parseInt(input);
+        if(e_id !== e_id){
+            resolve('No')
+        }
+        else if(e_id>array.length || e_id<1){
+            resolve("no")
+        }
+        else{
+            resolve('yes')
         }
     })
 }
@@ -128,30 +127,59 @@ async function start(){
     printCourses(all_data);
     console.log("");
 
-    const course = parseInt(readline.question("Which course do you wanna go with:- "));
-    const get_exercises = access_to_exercises(all_data, course);
-    console.log("");
-
-    const exercise_details = await caching(get_exercises.filename, get_exercises.url);
-
-    const slug_list = printExercises(exercise_details);
-
     while(true){
-        let exercise_id = parseInt(readline.question("Which exercise will you go with(exercise number):- "));
-        let valid = await checkingUserinput(exercise_id, slug_list);
+        console.log("");
+        var course = parseInt(readline.question("Which course do you wanna go with:- "));
+        var coursesDetails = all_data.data.availableCourses;
+        var valid = await checkingUserinput(course, coursesDetails);
+
+        if(valid==='no'){
+            console.log("");
+            console.log("              Wrong input");
+            console.log("");
+            console.log("    Enter the exact number of the Course.");
+            console.log("");
+            continue;
+        }else if(valid==='No'){
+            console.log("");
+            console.log("          Invalid input.");
+            console.log("");
+            console.log("     Only enter Course number.");
+            console.log("");
+        }else{
+            var get_exercises = access_to_exercises(coursesDetails, course);
+            console.log("");
+            var exercise_details = await caching(get_exercises.filename, get_exercises.url);
+            var slugList = printExercises(exercise_details);
+            break;
+        }
     }
 
-    // console.log("");
-    // if(exercise_id > slug_list.length){
-    //     console.log("Wrong input.");
-    //     console.log("Enter the valid exercise id.");
-    //     console.log("");
-    //     exercise_id = parseInt(readline.question("Which exercise will you go with(enter the id):- "));
-    //     if(exercise_id > slug_list.length){
-    //         console.log("");
-    //         console.log("Wrong input.");
-    //         console.log("");
-    choosingExercise(slug_list, get_exercises.url, exercise_id);
+    while(true){
+        console.log("");
+        var exercise_id = parseInt(readline.question("Which exercise will you go with(exercise number):- "));
+        valid = await checkingUserinput(exercise_id, slugList);
+
+        if(valid==='no'){
+            console.log("");
+            console.log("              Wrong input");
+            console.log("");
+            console.log("    Enter the exact number of the Exercise.");
+            console.log("");
+            continue;
+        }else if(valid==='No'){
+            console.log("");
+            console.log("          Invalid input.");
+            console.log("");
+            console.log("     Only enter exercise number.");
+            console.log("");
+        }else{
+            console.log("");
+            choosingExercise(slugList, get_exercises.url, exercise_id);
+            break;
+        }
+    }
+    console.log("");
     
 }
 
