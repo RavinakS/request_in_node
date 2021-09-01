@@ -109,50 +109,33 @@ function checkingUserinput(item, array){
         while(true){
             console.log("");
             var input = readline.question(`Which ${item} do you wanna go with:- `);
-            if(input.toLowerCase() === 'up'){
-                resolve('up');
+            let e_id = parseInt(input); // e_id = exercise_id/course_id
+            if(e_id !== e_id){
+                console.log("");
+                console.log("          Invalid input.");
+                console.log("");
+                console.log(`     Only enter ${item} number.`);
+                console.log("");
+            }
+            else if(e_id>array.length || e_id<1){
+                console.log("");
+                console.log("              Wrong input");
+                console.log("");
+                console.log(`    Enter the exact number of the ${item}`);
+                console.log("");
+            }
+            else{
+                resolve(e_id);
                 break;
-            }else if(input.toLowerCase() === 'n'){
-                resolve('n');
-                break;
-            }else if(input.toLowerCase() === 'p'){
-                resolve('p');
-                break;
-            }else if(input.toLowerCase() === 'exit'){
-                var exit = readline.question("Are you sure? you want to exit(y/n)");
-                if(exit.toLowerCase() ==='y'){
-                    resolve('exit');
-                    break;
-                }
-            }else{
-                let e_id = parseInt(input); // e_id = exercise_id/course_id
-                if(e_id !== e_id){
-                    console.log("");
-                    console.log("          Invalid input.");
-                    console.log("");
-                    console.log(`     Only enter ${item} number.`);
-                    console.log("");
-                }
-                else if(e_id>array.length || e_id<1){
-                    console.log("");
-                    console.log("              Wrong input");
-                    console.log("");
-                    console.log(`    Enter the exact number of the ${item}`);
-                    console.log("");
-                }
-                else{
-                    resolve(e_id);
-                    break;
-                }
             }
         }
     })
 }
 
 async function start(){
-    const all_data = await axios.get(url);
+    var all_data = await axios.get(url);
 
-    const wrote = await storeData(courses_file, all_data);
+    await storeData(courses_file, all_data);
 
     printCourses(all_data);
     console.log("");
@@ -165,8 +148,65 @@ async function start(){
     console.log("");
     var slugList = printExercises(exercise_details);
     valid = await checkingUserinput("exercise", slugList);
-    choosingExercise(slugList, get_exercises.url, valid);
+    await choosingExercise(slugList, get_exercises.url, valid);
     console.log("");
+    
+    var user_demands = {
+        'slug_list': slugList,
+        'slug_id': valid,
+        'e_url': get_exercises.url
+    }
+    return user_demands;
 }
 
-start();
+
+async function repeat(slugs, slugID, e_link){
+    while(true){
+        user = readline.question("Main page(up) /Previous(p) /Next(n) /Exit(e):- ");
+        if(user.toLowerCase() === 'up'){
+            await start();
+        }else if(user.toLowerCase() === 'p'){
+            console.log(slugID);
+            if(slugID === 1 || slugID <= 1){
+                console.log("");
+                console.log("Hey!!, You are in the first exercise page.");
+                console.log("");
+            }else{
+                slugID = slugID - 1;
+                await choosingExercise(slugs, e_link, slugID);
+            }
+        }else if(user.toLowerCase() === 'n'){
+            if(slugID === slugs.length){
+                console.log("");
+                console.log("This is the last exercise.");
+                console.log("");
+            }else{
+                slugID = slugID + 1;
+                await choosingExercise(slugs, e_link, slugID);
+            }
+        }else if(user.toLowerCase() === 'e' || user.toLowerCase() === 'exit'){
+            var confirm = readline.question("Are you sure, you want to exit?(y/n):- ");
+            if(confirm.toLowerCase() === 'y' || confirm.toLowerCase() === 'yes'){
+                console.log("");
+                console.log("Thank you!:))");
+                console.log("");
+                break;
+            }else{
+                console.log("");
+                console.log("Please confirm what do you want.");
+                console.log("");
+            }
+        }else{
+            console.log("");
+            console.log("Please confirm what do you want.");
+            console.log("");
+        }
+    }
+};
+
+async function main(){
+    var user_demands = await start();
+    await repeat(user_demands.slug_list, user_demands.slug_id, user_demands.e_url);
+};
+
+main();

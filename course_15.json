@@ -1,0 +1,141 @@
+{
+  "data": [
+    {
+      "id": "883",
+      "parent_exercise_id": null,
+      "name": "HTML Introduction",
+      "slug": "html__Introduction",
+      "sequence_num": 200,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/html/Introduction.md",
+      "submission_type": null,
+      "childExercises": [
+        {
+          "id": "888",
+          "parent_exercise_id": "880",
+          "name": "Part One",
+          "slug": "html__navgurukul-ka-brochure/part1",
+          "sequence_num": 1001,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/html/navgurukul-ka-brochure/part1.md",
+          "submission_type": null
+        },
+        {
+          "id": "889",
+          "parent_exercise_id": "880",
+          "name": "Part Two",
+          "slug": "html__navgurukul-ka-brochure/part2",
+          "sequence_num": 1002,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/html/navgurukul-ka-brochure/part2.md",
+          "submission_type": null
+        },
+        {
+          "id": "885",
+          "parent_exercise_id": "880",
+          "name": "Part Three",
+          "slug": "html__navgurukul-ka-brochure/part3",
+          "sequence_num": 1003,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/html/navgurukul-ka-brochure/part3.md",
+          "submission_type": null
+        },
+        {
+          "id": "886",
+          "parent_exercise_id": "880",
+          "name": "Part Four",
+          "slug": "html__navgurukul-ka-brochure/part4",
+          "sequence_num": 1004,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/html/navgurukul-ka-brochure/part4.md",
+          "submission_type": null
+        },
+        {
+          "id": "887",
+          "parent_exercise_id": "880",
+          "name": "Part Five",
+          "slug": "html__navgurukul-ka-brochure/part5",
+          "sequence_num": 1005,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/html/navgurukul-ka-brochure/part5.md",
+          "submission_type": null
+        },
+        {
+          "id": "890",
+          "parent_exercise_id": "880",
+          "name": "Place Six",
+          "slug": "html__navgurukul-ka-brochure/part6",
+          "sequence_num": 1006,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/html/navgurukul-ka-brochure/part6.md",
+          "submission_type": null
+        },
+        {
+          "id": "891",
+          "parent_exercise_id": "880",
+          "name": "Part Seven",
+          "slug": "html__navgurukul-ka-brochure/part7",
+          "sequence_num": 1007,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/html/navgurukul-ka-brochure/part7.md",
+          "submission_type": null
+        }
+      ]
+    },
+    {
+      "id": "881",
+      "parent_exercise_id": null,
+      "name": "Nested Tables",
+      "slug": "html__nested-tables",
+      "sequence_num": 300,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/html/nested-tables.md",
+      "submission_type": null,
+      "childExercises": [
+        {
+          "id": "892",
+          "parent_exercise_id": "882",
+          "name": "Kindness - Introduction",
+          "slug": "html__kindness/kindnessa",
+          "sequence_num": 2001,
+          "review_type": "peer",
+          "github_link": "https://github.com/navgurukul/newton/tree/master/html/kindness/kindnessa.md",
+          "submission_type": null
+        }
+      ]
+    },
+    {
+      "id": "884",
+      "parent_exercise_id": null,
+      "name": "HTML5 Video",
+      "slug": "html__html5-video",
+      "sequence_num": 400,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/html/html5-video.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "880",
+      "parent_exercise_id": "880",
+      "name": "Brochure - Introduction",
+      "slug": "html__navgurukul-ka-brochure/part0",
+      "sequence_num": 1000,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/html/navgurukul-ka-brochure/part0.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "882",
+      "parent_exercise_id": "882",
+      "name": "Kindness - Part One",
+      "slug": "html__kindness/kindness",
+      "sequence_num": 2000,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/html/kindness/kindness.md",
+      "submission_type": null,
+      "childExercises": []
+    }
+  ]
+}

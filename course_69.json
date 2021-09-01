@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "id": "1846",
+      "parent_exercise_id": null,
+      "name": "how-to-use",
+      "slug": "movies__how-to-use",
+      "sequence_num": 0,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/movies/how-to-use.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1813",
+      "parent_exercise_id": null,
+      "name": "list",
+      "slug": "movies__list",
+      "sequence_num": 100,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/movies/list.md",
+      "submission_type": null,
+      "childExercises": []
+    }
+  ]
+}
