@@ -104,17 +104,30 @@ async function choosingExercise(slugList, exercise_link, exerciseID){
 
 }
 
-function checkingUserinput(input, array){
+function checkingUserinput(item, array){
     return new Promise((resolve, reject)=>{
-        let e_id = parseInt(input);
-        if(e_id !== e_id){
-            resolve('No')
-        }
-        else if(e_id>array.length || e_id<1){
-            resolve("no")
-        }
-        else{
-            resolve('yes')
+        while(true){
+            console.log("");
+            var input = readline.question(`Which ${item} do you wanna go with:- `);
+            let e_id = parseInt(input); // e_id = exercise_id/course_id
+            if(e_id !== e_id){
+                console.log("");
+                console.log("          Invalid input.");
+                console.log("");
+                console.log(`     Only enter ${item} number.`);
+                console.log("");
+            }
+            else if(e_id>array.length || e_id<1){
+                console.log("");
+                console.log("              Wrong input");
+                console.log("");
+                console.log(`    Enter the exact number of the ${item}`);
+                console.log("");
+            }
+            else{
+                resolve(e_id);
+                break;
+            }
         }
     })
 }
@@ -126,61 +139,17 @@ async function start(){
 
     printCourses(all_data);
     console.log("");
+    var coursesDetails = all_data.data.availableCourses;
+    var valid = await checkingUserinput("course", coursesDetails);
 
-    while(true){
-        console.log("");
-        var course = parseInt(readline.question("Which course do you wanna go with:- "));
-        var coursesDetails = all_data.data.availableCourses;
-        var valid = await checkingUserinput(course, coursesDetails);
+    var get_exercises = access_to_exercises(coursesDetails, valid);
+    var exercise_details = await caching(get_exercises.filename, get_exercises.url);
 
-        if(valid==='no'){
-            console.log("");
-            console.log("              Wrong input");
-            console.log("");
-            console.log("    Enter the exact number of the Course.");
-            console.log("");
-            continue;
-        }else if(valid==='No'){
-            console.log("");
-            console.log("          Invalid input.");
-            console.log("");
-            console.log("     Only enter Course number.");
-            console.log("");
-        }else{
-            var get_exercises = access_to_exercises(coursesDetails, course);
-            console.log("");
-            var exercise_details = await caching(get_exercises.filename, get_exercises.url);
-            var slugList = printExercises(exercise_details);
-            break;
-        }
-    }
-
-    while(true){
-        console.log("");
-        var exercise_id = parseInt(readline.question("Which exercise will you go with(exercise number):- "));
-        valid = await checkingUserinput(exercise_id, slugList);
-
-        if(valid==='no'){
-            console.log("");
-            console.log("              Wrong input");
-            console.log("");
-            console.log("    Enter the exact number of the Exercise.");
-            console.log("");
-            continue;
-        }else if(valid==='No'){
-            console.log("");
-            console.log("          Invalid input.");
-            console.log("");
-            console.log("     Only enter exercise number.");
-            console.log("");
-        }else{
-            console.log("");
-            choosingExercise(slugList, get_exercises.url, exercise_id);
-            break;
-        }
-    }
     console.log("");
-    
+    var slugList = printExercises(exercise_details);
+    valid = await checkingUserinput("exercise", slugList);
+    choosingExercise(slugList, get_exercises.url, valid);
+    console.log("");
 }
 
 start();
