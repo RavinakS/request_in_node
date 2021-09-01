@@ -109,24 +109,41 @@ function checkingUserinput(item, array){
         while(true){
             console.log("");
             var input = readline.question(`Which ${item} do you wanna go with:- `);
-            let e_id = parseInt(input); // e_id = exercise_id/course_id
-            if(e_id !== e_id){
-                console.log("");
-                console.log("          Invalid input.");
-                console.log("");
-                console.log(`     Only enter ${item} number.`);
-                console.log("");
-            }
-            else if(e_id>array.length || e_id<1){
-                console.log("");
-                console.log("              Wrong input");
-                console.log("");
-                console.log(`    Enter the exact number of the ${item}`);
-                console.log("");
-            }
-            else{
-                resolve(e_id);
+            if(input.toLowerCase() === 'up'){
+                resolve('up');
                 break;
+            }else if(input.toLowerCase() === 'n'){
+                resolve('n');
+                break;
+            }else if(input.toLowerCase() === 'p'){
+                resolve('p');
+                break;
+            }else if(input.toLowerCase() === 'exit'){
+                var exit = readline.question("Are you sure? you want to exit(y/n)");
+                if(exit.toLowerCase() ==='y'){
+                    resolve('exit');
+                    break;
+                }
+            }else{
+                let e_id = parseInt(input); // e_id = exercise_id/course_id
+                if(e_id !== e_id){
+                    console.log("");
+                    console.log("          Invalid input.");
+                    console.log("");
+                    console.log(`     Only enter ${item} number.`);
+                    console.log("");
+                }
+                else if(e_id>array.length || e_id<1){
+                    console.log("");
+                    console.log("              Wrong input");
+                    console.log("");
+                    console.log(`    Enter the exact number of the ${item}`);
+                    console.log("");
+                }
+                else{
+                    resolve(e_id);
+                    break;
+                }
             }
         }
     })
