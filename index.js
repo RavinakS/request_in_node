@@ -95,34 +95,29 @@ async function getContent(slugs, course_url, slug_id){
     }
 }
 
-async function choosingExercise(slugList, exercise_link){
+async function choosingExercise(slugList, exercise_link, exerciseID){
     if(slugList !== "no"){
+        content = await getContent(slugList, exercise_link, exerciseID);
         console.log("");
-        let exercise_id = parseInt(readline.question("Which exercise will you go with(only parant exercises):- "));
-        console.log("");
-        if(exercise_id > slugList.length){
-            console.log("Please select only parant exercises not child ones.");
-            console.log("do check once which is chiled and which is parant exercise.");
-            console.log("");
-            exercise_id = parseInt(readline.question("Which exercise will you go with(only parant exercises):- "));
-            if(exercise_id > slugList.length){
-                console.log("");
-                console.log("Wrong input.");
-                console.log("");
-            }else{
-                content = await getContent(slugList, exercise_link, exercise_id);
-                // console.log(content);
-                console.log("");
-            }
-        }else{
-            content = await getContent(slugList, exercise_link, exercise_id);
-            // console.log(content);
-            console.log("");
-        }
     }else{
         console.log("Exercise not available.");
     }
 
+}
+
+function checkingUserinput(input, array){
+    return new Promise((resolve, reject)=>{
+        try{
+            let id = parseInt(input);
+            if(id>array.length){
+                reject("no")
+            }else{
+                resolve('yes')
+            }
+        }catch{
+            reject('No')
+        }
+    })
 }
 
 async function start(){
@@ -141,7 +136,22 @@ async function start(){
 
     const slug_list = printExercises(exercise_details);
 
-    choosingExercise(slug_list, get_exercises.url);
+    while(true){
+        let exercise_id = parseInt(readline.question("Which exercise will you go with(exercise number):- "));
+        let valid = await checkingUserinput(exercise_id, slug_list);
+    }
+
+    // console.log("");
+    // if(exercise_id > slug_list.length){
+    //     console.log("Wrong input.");
+    //     console.log("Enter the valid exercise id.");
+    //     console.log("");
+    //     exercise_id = parseInt(readline.question("Which exercise will you go with(enter the id):- "));
+    //     if(exercise_id > slug_list.length){
+    //         console.log("");
+    //         console.log("Wrong input.");
+    //         console.log("");
+    choosingExercise(slug_list, get_exercises.url, exercise_id);
     
 }
 
