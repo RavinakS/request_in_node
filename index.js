@@ -164,7 +164,10 @@ async function repeat(slugs, slugID, e_link){
     while(true){
         user = readline.question("Main page(up) /Previous(p) /Next(n) /Exit(e):- ");
         if(user.toLowerCase() === 'up'){
-            await start();
+            var updated_e_details = await start();
+            slugID = updated_e_details.slug_id;
+            e_link = updated_e_details.e_url;
+            slugs = updated_e_details.slug_list;
         }else if(user.toLowerCase() === 'p'){
             console.log(slugID);
             if(slugID === 1 || slugID <= 1){
@@ -185,6 +188,7 @@ async function repeat(slugs, slugID, e_link){
                 await choosingExercise(slugs, e_link, slugID);
             }
         }else if(user.toLowerCase() === 'e' || user.toLowerCase() === 'exit'){
+            console.log("");
             var confirm = readline.question("Are you sure, you want to exit?(y/n):- ");
             if(confirm.toLowerCase() === 'y' || confirm.toLowerCase() === 'yes'){
                 console.log("");
