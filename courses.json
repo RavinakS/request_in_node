@@ -555,20 +555,6 @@
       "short_description": "Let's learn typing"
     },
     {
-      "id": "143",
-      "name": "Shift Row (Typing)",
-      "type": "typing",
-      "logo": "http://navgurukul.org/img/sqlogo.jpg",
-      "short_description": "Let's learn typing"
-    },
-    {
-      "id": "144",
-      "name": "Special Keys (Typing)",
-      "type": "typing",
-      "logo": "http://navgurukul.org/img/sqlogo.jpg",
-      "short_description": "Let's learn typing"
-    },
-    {
       "id": "147",
       "name": "JS Web-Development Projects",
       "type": "js",

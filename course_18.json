@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "id": "2256",
+      "parent_exercise_id": null,
+      "name": "Introduction To Python",
+      "slug": "python__introductionToPython",
+      "sequence_num": 0,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/python/introductionToPython.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "2378",
+      "parent_exercise_id": null,
+      "name": "Variables",
+      "slug": "python__variables",
+      "sequence_num": 100,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/python/variables.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "3159",
+      "parent_exercise_id": null,
+      "name": "Files",
+      "slug": "python__dataTypes",
+      "sequence_num": 200,
+      "review_type": "manual",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/python/dataTypes.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "3160",
+      "parent_exercise_id": null,
+      "name": "Operators",
+      "slug": "python__operators",
+      "sequence_num": 300,
+      "review_type": "manual",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/python/operators.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "2257",
+      "parent_exercise_id": null,
+      "name": "If Statement",
+      "slug": "python__ifElse",
+      "sequence_num": 400,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/python/ifElse.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "2041",
+      "parent_exercise_id": null,
+      "name": "loops-course-link",
+      "slug": "python__loops-course-link",
+      "sequence_num": 500,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/python/loops-course-link.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "1972",
+      "parent_exercise_id": null,
+      "name": "Lists",
+      "slug": "python__lists",
+      "sequence_num": 600,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/python/lists.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "2331",
+      "parent_exercise_id": null,
+      "name": " Python function",
+      "slug": "python__functions",
+      "sequence_num": 700,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/python/functions.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "2333",
+      "parent_exercise_id": null,
+      "name": "More Exercise",
+      "slug": "python__moreExercise",
+      "sequence_num": 800,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/python/moreExercise.md",
+      "submission_type": null,
+      "childExercises": []
+    },
+    {
+      "id": "2332",
+      "parent_exercise_id": null,
+      "name": "Files",
+      "slug": "python__files",
+      "sequence_num": 900,
+      "review_type": "peer",
+      "github_link": "https://github.com/navgurukul/newton/tree/master/python/files.md",
+      "submission_type": null,
+      "childExercises": []
+    }
+  ]
+}

@@ -16,7 +16,7 @@ function storeData(filename, data){
             if(err){
                 reject("something went wrong!");
             }else{
-                resolve("Successfully written!")
+                resolve("Successfully written!");
             }
         })
     })
